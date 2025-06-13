@@ -7,12 +7,13 @@ export type SampleDataItem = {
   date: string;
   images: string[];
 };
+
 export type SampleDataType = SampleDataItem[];
 
 export const sampleData: SampleDataType = [
   {
     id: 1,
-    slug: "parda",
+    slug: "veloura",
     url: "/assets/images/img1.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -27,7 +28,7 @@ export const sampleData: SampleDataType = [
   },
   {
     id: 2,
-    slug: "parda",
+    slug: "mondessa",
     url: "/assets/images/img2.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -41,8 +42,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 3,
+    slug: "nylvette",
     url: "/assets/images/img3.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -56,8 +57,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 4,
+    slug: "zairona",
     url: "/assets/images/img4.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -71,8 +72,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 5,
+    slug: "ferentis",
     url: "/assets/images/img5.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -86,8 +87,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 6,
+    slug: "quintessy",
     url: "/assets/images/img6.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -101,8 +102,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 7,
+    slug: "aurivine",
     url: "/assets/images/img7.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -116,8 +117,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 8,
+    slug: "melosia",
     url: "/assets/images/img8.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -131,8 +132,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 9,
+    slug: "bavique",
     url: "/assets/images/img9.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -146,8 +147,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 10,
+    slug: "seraphyne",
     url: "/assets/images/img10.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -161,8 +162,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 11,
+    slug: "lyrenta",
     url: "/assets/images/img11.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -176,8 +177,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 12,
+    slug: "thessale",
     url: "/assets/images/img12.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -191,8 +192,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 13,
+    slug: "solvane",
     url: "/assets/images/img13.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -206,8 +207,8 @@ export const sampleData: SampleDataType = [
     ],
   },
   {
-    id: 2,
-    slug: "parda",
+    id: 14,
+    slug: "jurellia",
     url: "/assets/images/img14.jpeg",
     client: "Prada",
     location: "Milan,IT",
@@ -220,9 +221,9 @@ export const sampleData: SampleDataType = [
       "/assets/images/Lipstick5.jpeg",
     ],
   },
-     {
-    id: 2,
-    slug: "parda",
+  {
+    id: 15,
+    slug: "verdanis",
     url: "/assets/images/img15.jpeg",
     client: "Prada",
     location: "Milan,IT",

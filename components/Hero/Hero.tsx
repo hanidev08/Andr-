@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { sampleData } from "@/sampleData";
 import Link from "next/link";
 import { SliderConfig } from "./config";
+import { useTransitionRouter } from "next-view-transitions";
 
 const MAX_IMAGE_WIDTH = 100;
 const MIN_IMAGE_WIDTH = 100;
@@ -17,6 +18,8 @@ const DESCTOP_SIZE = 1200;
 const interval = 2000;
 const animationDuration = 1.5;
 export const Hero = () => {
+  const router = useTransitionRouter();
+
   const [isAnimating, setIsAnimating] = useState(true);
 
   const { width, height } = useWindowSize();
@@ -87,7 +90,6 @@ export const Hero = () => {
                 y: 0,
                 width: activeData.width,
                 height: activeData.height,
-                zIndex: 10 * (index + 1),
               }}
               animate={{
                 x: activeData.x,
@@ -101,7 +103,15 @@ export const Hero = () => {
               }}
               className="absolute"
             >
-              <Link href={slug}>
+              <Link
+                href={slug}
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push(slug, {
+                    onTransitionReady: pageAnimation,
+                  });
+                }}
+              >
                 <div className="relative w-full h-full">
                   <Image src={url} alt="img" fill />
                 </div>
@@ -111,5 +121,43 @@ export const Hero = () => {
         })}
       </div>
     </section>
+  );
+};
+
+export const pageAnimation = () => {
+  document.documentElement.animate(
+    [
+      {
+        opacity: 1,
+        transform: "translateY(0)",
+      },
+      {
+        opacity: 0.2,
+        transform: "translateY(-35%)",
+      },
+    ],
+    {
+      duration: 1500,
+      easing: "cubic-bezier(0.87, 0, 0.13, 1)",
+      fill: "forwards",
+      pseudoElement: "::view-transition-old(root)",
+    }
+  );
+
+  document.documentElement.animate(
+    [
+      {
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+      },
+      {
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+      },
+    ],
+    {
+      duration: 1500,
+      easing: "cubic-bezier(0.87, 0, 0.13, 1)",
+      fill: "forwards",
+      pseudoElement: "::view-transition-new(root)",
+    }
   );
 };
