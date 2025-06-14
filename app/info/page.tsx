@@ -1,11 +1,14 @@
 "use client";
 import AnimatedText from "@/components/AnimatedText";
-import img from "@/public/assets/images/Lipstick3.jpeg";
+import img from "@/public/assets/images/Andre.jpeg";
 import { useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import "./style.scss";
 
 const Page = () => {
+  const imgRef = useRef(null);
+  const isInViewImg = useInView(imgRef);
   const description = useRef(null);
   const isInView = useInView(description, {
     once: false,
@@ -13,73 +16,67 @@ const Page = () => {
   });
   return (
     <section ref={description}>
-      <div className="container py-20">
+      <div className="container max-md:py-20 md:pt-10 ">
         <div className="flex flex-col md:flex-row max-md:justify-between md:justify-end gap-30">
           <div className=" flex flex-col max-md:w-full max-md:items-end text-[12px] font-bold">
             <ul>
               <li>
                 <AnimatedText
-                  phrase={"In their studio created"}
+                  phrase={"Working out of their"}
                   isInView={isInView}
                 />
               </li>
               <li>
                 <AnimatedText
-                  phrase={"in Paris in 2012,"}
+                  phrase={"Los Angeles studio since 2020"}
                   isInView={isInView}
                 />
               </li>
               <li>
-                <AnimatedText phrase={"Paul & Henriette"} isInView={isInView} />
+                <AnimatedText phrase={"André Étienne"} isInView={isInView} />
               </li>
               <li>
                 <AnimatedText
-                  phrase={"imagine photographs,"}
+                  phrase={"craft photographs,"}
                   isInView={isInView}
                 />
               </li>
               <li>
+                <AnimatedText phrase={"visual books,"} isInView={isInView} />
+              </li>
+              <li>
                 <AnimatedText
-                  phrase={"books of pictures,"}
+                  phrase={"and immersive installations."}
                   isInView={isInView}
                 />
               </li>
               <li>
-                <AnimatedText
-                  phrase={"and installations."}
-                  isInView={isInView}
-                />
+                <AnimatedText phrase={"Their work,"} isInView={isInView} />
               </li>
               <li>
                 <AnimatedText
-                  phrase={"they constantly try"}
-                  isInView={isInView}
-                />
-              </li>
-              <li>
-                <AnimatedText
-                  phrase={"in compositions of"}
+                  phrase={"grounded in minimal compositions"}
                   isInView={isInView}
                 />
               </li>
               <li>
                 <AnimatedText
-                  phrase={"an apparent simplicity,"}
+                  phrase={"explores the tension between familiarity,"}
+                  isInView={isInView}
+                />
+              </li>
+              <li>
+                <AnimatedText phrase={"and the uncanny,"} isInView={isInView} />
+              </li>
+              <li>
+                <AnimatedText
+                  phrase={"often revealing a quiet yet"}
                   isInView={isInView}
                 />
               </li>
               <li>
                 <AnimatedText
-                  phrase={"to hatch a sense of"}
-                  isInView={isInView}
-                />
-              </li>
-              <li>
-                <AnimatedText phrase={"strangeness and"} isInView={isInView} />
-              </li>
-              <li>
-                <AnimatedText
-                  phrase={"vibrant sensuality."}
+                  phrase={"electric sensuality."}
                   isInView={isInView}
                 />
               </li>
@@ -97,36 +94,36 @@ const Page = () => {
                 <li>
                   <AnimatedText phrase={"Clients:"} isInView={isInView} />
                 </li>
-                <AnimatedText
-                  phrase={"Air France Magazine"}
-                  isInView={isInView}
-                />
+                <AnimatedText phrase={"The New Yorker"} isInView={isInView} />
                 <li>
-                  <AnimatedText phrase={"Bulgari"} isInView={isInView} />
+                  <AnimatedText phrase={"MoMA"} isInView={isInView} />
                 </li>
                 <li>
-                  <AnimatedText phrase={"Cartier"} isInView={isInView} />
+                  <AnimatedText phrase={"Aesop"} isInView={isInView} />
                 </li>
                 <li>
-                  <AnimatedText phrase={"Elle"} isInView={isInView} />
+                  <AnimatedText phrase={"COS"} isInView={isInView} />
                 </li>
                 <li>
-                  <AnimatedText phrase={"Hermès"} isInView={isInView} />
+                  <AnimatedText phrase={"Chanel"} isInView={isInView} />
                 </li>
                 <li>
-                  <AnimatedText phrase={"Jil Sander"} isInView={isInView} />
+                  <AnimatedText phrase={"Vogue US"} isInView={isInView} />
                 </li>
                 <li>
-                  <AnimatedText phrase={"Miu Miu"} isInView={isInView} />
+                  <AnimatedText
+                    phrase={"Yves Saint Laurent"}
+                    isInView={isInView}
+                  />
                 </li>
                 <li>
-                  <AnimatedText phrase={"Libération"} isInView={isInView} />
+                  <AnimatedText phrase={"Kinfolk"} isInView={isInView} />
                 </li>
                 <li>
-                  <AnimatedText phrase={"M, Le Monde:"} isInView={isInView} />
+                  <AnimatedText phrase={"T Magazine"} isInView={isInView} />
                 </li>
                 <li>
-                  <AnimatedText phrase={"Marie-Claire:"} isInView={isInView} />
+                  <AnimatedText phrase={"Nike"} isInView={isInView} />
                 </li>
               </ul>
             </div>
@@ -137,29 +134,29 @@ const Page = () => {
                 <AnimatedText phrase={"Contact:"} isInView={isInView} />
               </li>
               <li>
-                <AnimatedText
-                  phrase={"André Étienne live and work"}
-                  isInView={isInView}
-                />
+                <AnimatedText phrase={"André Étienne"} isInView={isInView} />
               </li>
               <li>
-                <AnimatedText phrase={"in Paris"} isInView={isInView} />
+                <AnimatedText
+                  phrase={"Live and work in New York"}
+                  isInView={isInView}
+                />
               </li>
               <li className=" max-md:mt-4">
                 <AnimatedText
-                  phrase={"studio@paulethenriette.com"}
+                  phrase={"studio@andre-etienne.com"}
                   isInView={isInView}
                 />
               </li>
               <li>
                 <AnimatedText
-                  phrase={"+33 6 84 20 68 96"}
+                  phrase={"+1 (646) 555-1832"}
                   isInView={isInView}
                 />
               </li>
               <li className="">
                 <AnimatedText
-                  phrase={"+33 6 20 37 15 29"}
+                  phrase={"+1 (917) 555-2049"}
                   isInView={isInView}
                 />
               </li>
@@ -168,19 +165,19 @@ const Page = () => {
               </li>
               <li className=" max-md:mt-4">
                 <AnimatedText
-                  phrase={"represented by FMA Le Bureau"}
+                  phrase={"Represented by Field Representation NYC"}
                   isInView={isInView}
                 />
               </li>
               <li className=" max-md:mt-4">
                 <AnimatedText
-                  phrase={"studio@paulethenriette.com"}
+                  phrase={"contact@field-rep.com"}
                   isInView={isInView}
                 />
               </li>
               <li className="">
                 <AnimatedText
-                  phrase={"+33 6 20 37 15 29"}
+                  phrase={"+1 (212) 555-7623"}
                   isInView={isInView}
                 />
               </li>
@@ -188,11 +185,19 @@ const Page = () => {
           </div>
         </div>
         <div className=" hidden md:w-[90%] md:flex md:justify-between md:items-end  md:mt-20">
-          <div className="text-8xl uppercase font-bold text-center">
+          <div className="text-[96px] uppercase font-bold text-center">
             <AnimatedText phrase={"André Étienne"} isInView={isInView} />
           </div>
-          <div className=" flex relative w-[30vw] max-w-[200px] aspect-[4/5]">
-            <Image src={img} alt="img" fill className=" object-cover" />
+          <div
+            ref={imgRef}
+            className="flex relative w-[30vw] max-w-[200px] aspect-[4/5] "
+          >
+            <Image
+              src={img}
+              alt="img"
+              fill
+              className={`image object-cover ${isInViewImg ? "is-reveal" : ""}`}
+            />
           </div>
         </div>
       </div>
